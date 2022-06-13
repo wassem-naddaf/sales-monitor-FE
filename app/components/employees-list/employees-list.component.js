@@ -1,3 +1,4 @@
+import hightlightFilter from '../../core/filters/highlight.filter';
 angular
   .module('appModule')
   .component('employeesList', {
@@ -6,7 +7,8 @@ angular
     controllerAs: 'EmployeesListComponentVm',
     bindings: {
       employeesList: '<',
+      search: '<',
     },
-  });
+  }).filter('highlight', hightlightFilter);
 
-function EmployeesListComponent() {}
+function EmployeesListComponent() { }
