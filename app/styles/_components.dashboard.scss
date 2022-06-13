@@ -30,6 +30,8 @@
 }
 
 .c-filters__container {
+  display: flex;
+  justify-content: center;
   margin: 0 0 8px;
   padding: 16px 8px;
   border: 1px solid #dcdee3;
