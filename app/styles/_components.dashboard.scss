@@ -41,6 +41,18 @@
 .c-chart__container {
   height: 350px;
   width: 760px;
+
+  .c-chart__tooltip {
+    padding: 4px;
+    font-size: 12px;
+    background-color: #16253f;
+    color: white;
+    text-align: center;
+
+    p {
+      margin: 0px;
+    }
+  }
 }
 
 .c-button {
