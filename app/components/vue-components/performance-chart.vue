@@ -33,9 +33,9 @@ export default {
       type: Object,
       default: () => {
         return {
-          start: '',
-          end: '',
-        }
+          start: "",
+          end: "",
+        };
       },
     },
   },
@@ -67,6 +67,41 @@ export default {
           confine: false,
           hideDelay: 0,
           padding: 0,
+          formatter: function (params) {
+            return `<div class="c-chart__tooltip">
+              <p><b>${params[0].name}</b></p>
+              <div>
+                <span>${params[0].marker}</span>
+                <span>Team Performance index ${params[0].value} %</span>
+              </div>
+            </div>`;
+          },
+        },
+        visualMap: {
+          show: true,
+          dimension: 1,
+          bottom: 20,
+          right: 5,
+          pieces: [
+            {
+              min: 0,
+              max: 50,
+              color: "red",
+              label: "0 - 50",
+            },
+            {
+              min: 50,
+              max: 80,
+              color: "orange",
+              label: "50 - 80",
+            },
+            {
+              min: 80,
+              max: 100,
+              color: "green",
+              label: "80 - 100",
+            },
+          ],
         },
         grid: {
           left: "30px",
